@@ -29,7 +29,7 @@ Los siguientes endpoints están disponibles para la gestión de personajes y loc
 - `POST /characters`: Crear un nuevo personaje.
 - `PUT /characters/{id}`: Actualizar un personaje existente.
 - `DELETE /characters/{id}`: Eliminar un personaje.
-- `GET /characters/sync`: Sincronizar información con la API oficial de Rick and Morty.
+- `POST /characters/sync`: Sincronizar información de los characters con la API oficial de Rick and Morty.
 
 ### Locaciones
 - `GET /locations`: Obtener todas las locaciones.
@@ -37,6 +37,7 @@ Los siguientes endpoints están disponibles para la gestión de personajes y loc
 - `POST /locations`: Crear una nueva locación.
 - `PUT /locations/{id}`: Actualizar una locación existente.
 - `DELETE /locations/{id}`: Eliminar una locación.
+- `POST /locations/sync`: Sincronizar información de los locations con la API oficial de Rick and Morty.
 
 ## Deploy con Docker
 El archivo docker-compose.yml se encargará de crear automáticamente la base de datos MySQL y servirla en el puerto por defecto (3306) . Además, realizará el build del archivo .jar de nuestra aplicación y la servirá en http://localhost:8080.
@@ -52,6 +53,32 @@ docker-compose build
 docker-compose up -d
 ```
 
+## Ejemplo de Petición y Respuesta en JSON
+
+### Sincronizar los characters
+```bash
+POST /characters/sync
+```
+![sync characters.](https://raw.githubusercontent.com/juancuero/rick-and-morty-multi-module-api/main/screenshots/sync-characters.png)
+
+### Listar todos los characters
+```bash
+GET /characters
+```
+![list characters.](https://raw.githubusercontent.com/juancuero/rick-and-morty-multi-module-api/main/screenshots/list-characters.png)
+
+
+### Sincronizar los locations
+```bash
+POST /locations/sync
+```
+![sync locations.](https://raw.githubusercontent.com/juancuero/rick-and-morty-multi-module-api/main/screenshots/sync-locations.png)
+
+### Listar todos los locations
+```bash
+GET /locations
+```
+![list locations.](https://raw.githubusercontent.com/juancuero/rick-and-morty-multi-module-api/main/screenshots/list-locations.png)
 
 
 
