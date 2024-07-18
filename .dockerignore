@@ -1,0 +1,17 @@
+target/
+.idea/
+*.iml
+*.log
+*.swp
+*.tmp
+*~
+*.bak
+*.pid
+*.seed
+*.pid.lock
+.vscode/
+.env
+docker-compose.yml
+Dockerfile
+.git/
+.gitignore
